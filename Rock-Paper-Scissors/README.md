@@ -33,7 +33,7 @@ The Rock Paper Scissors Hand Game is an interactive Python application that allo
 Clone this repository to your local machine:
 
 ```
-git clone https://github.com/GChukwudi/GHW-Games.git
+git clone https://github.com/GChukwudi/GHW-Task.git
 ```
 
 Navigate to the project directory:
