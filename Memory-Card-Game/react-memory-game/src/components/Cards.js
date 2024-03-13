@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Card from './Card';
 
 export default function Cards() {
@@ -23,9 +23,45 @@ export default function Cards() {
     ].sort(() => Math.random() - 0.5));
 
        const [previousCard, setPreviousCard] = useState(-1);
+       const previousCardIndex = useRef(-1);
+
+        const matchCheck = (currentCard) => {
+            if (cards[currentCard].id === cards[previousCard].id) {
+                cards[previousCard].status = 'active matched';
+                cards[currentCard].status = 'active matched';
+                setPreviousCard(-1);
+            } else {
+                cards[currentCard].status = 'active';
+                setCards([...cards]);
+                setTimeout(() => {
+                    setPreviousCard(-1);
+                    cards[currentCard].status = 'unmatched';
+                    cards[previousCard].status = 'unmatched';
+                    setCards([...cards]);
+                }, 1000);
+            }
+        }
 
         const clickHandler = (index) => {
-            alert(index);
+            if (index !== previousCardIndex.current){
+                if (cards[index].status === 'active matched') {
+                    alert('You clicked a matched card!');
+                } else {
+                    if (previousCard === -1) {
+                        setPreviousCard(index);
+                        previousCardIndex.current = index;
+                        cards[index].status = 'active';
+                        setCards([...cards]);
+                        setPreviousCard(index);
+                    } else {
+                        matchCheck(index);
+                        previousCardIndex.current = -1;
+                    }
+                }
+            }
+            else{
+                alert('You clicked the same card!');
+            }
         }
 
         return (
