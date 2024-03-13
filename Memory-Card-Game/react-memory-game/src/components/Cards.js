@@ -20,12 +20,12 @@ export default function Cards() {
         {id: 6, name: 'Gina Gray', status: '', image: '/images/07.jpg' },
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
-    ]).sort
+    ].sort(() => Math.random() - 0.5));
 
         return (
             <div className="container">
                 { cards.map((card, index) => {
-                    return <Card card={card} />
+                    return <Card card={card} key={index} />
                 }
                 )}
             </div>
