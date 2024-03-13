@@ -25,7 +25,7 @@ export default function Cards() {
         return (
             <div className="container">
                 { cards.map((card, index) => {
-                    return <Card card={card} key={index} />
+                    return <Card card={card} key={index} index={index} />
                 }
                 )}
             </div>
