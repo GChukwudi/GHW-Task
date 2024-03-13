@@ -22,6 +22,8 @@ export default function Cards() {
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
     ].sort(() => Math.random() - 0.5));
 
+       const [previousCard, setPreviousCard] = useState(-1);
+
         const clickHandler = (index) => {
             alert(index);
         }
