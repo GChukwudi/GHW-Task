@@ -1,6 +1,5 @@
 import './App.css';
-import { useState } from 'react';
-import Card from './components/Card';
+import React, { useState } from 'react';
 import Cards from './components/Cards';
 
 function App() {

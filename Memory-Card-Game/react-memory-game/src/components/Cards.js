@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Card from './Card';
 
 export default function Cards() {
 
@@ -18,7 +20,7 @@ export default function Cards() {
         {id: 6, name: 'Gina Gray', status: '', image: '/images/07.jpg' },
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
-    ])
+    ]).sort
 
         return (
             <div className="container">
