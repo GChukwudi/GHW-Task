@@ -1,21 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Card from './components/Card';
+import Cards from './components/Cards';
 
 function App() {
-  const [cards, setCards] = useState(0);
+
+
   return (
     <div className="App">
-      <button onClick={() => setCards(cards + 1)} >add 1</button>
-      <h1>Memory Card Game</h1>
-      <Card />
-    </div>
-  );
-}
-function Card() {
-  return (
-    <div>
-      <h1>Card</h1>
+      <h1>Peaky Blinders</h1>
+      <Cards />
     </div>
   );
 }
