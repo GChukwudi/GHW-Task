@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [cards, setCards] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setCards(cards + 1)} >add 1</button>
+      <h1>Memory Card Game</h1>
+      <Card />
+    </div>
+  );
+}
+function Card() {
+  return (
+    <div>
+      <h1>Card</h1>
     </div>
   );
 }
