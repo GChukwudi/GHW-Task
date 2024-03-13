@@ -1,7 +1,7 @@
 
-export default function Card({ card, index }){
+export default function Card({ card, index, clickHandler }){
     return (
-        <div className="card">
+        <div className="card" onClick={() => clickHandler(index)}>
             <img src={card.image} alt={card.name} />
         </div>
     )

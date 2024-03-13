@@ -22,10 +22,14 @@ export default function Cards() {
         {id: 7, name: 'Finn Shelby', status: '', image: '/images/08.jpg' },
     ].sort(() => Math.random() - 0.5));
 
+        const clickHandler = (index) => {
+            alert(index);
+        }
+
         return (
             <div className="container">
                 { cards.map((card, index) => {
-                    return <Card card={card} key={index} index={index} />
+                    return <Card card={card} key={index} index={index} clickHandler={clickHandler} />
                 }
                 )}
             </div>
