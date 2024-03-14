@@ -7,6 +7,7 @@ const TicTacToe = () => {
   return (
     <div className='container'>
       <h1 className='title'>Tic Tac Toe</h1>
+      <button className="reset">Reset</button>
       <div className="board">
         <div className="row1">
             <div className="boxes"></div>
@@ -24,7 +25,7 @@ const TicTacToe = () => {
             <div className="boxes"></div>
         </div>
         </div>
-      <button className="reset">Reset</button>
+      {/* <button className="reset">Reset</button> */}
 
     </div>
   );
