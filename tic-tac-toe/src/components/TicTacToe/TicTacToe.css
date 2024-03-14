@@ -2,7 +2,7 @@
     text-align: center;
 }
 .title{
-    margin-top: 40px;
+    margin-top: 10px;
     color: white;
     font-size: 50px;
     display: flex;
@@ -10,17 +10,17 @@
     text-align: center;
 }
 .reset {
-    width: 150px;
-    height: 75px;
+    width: 100px;
+    height: 45px;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 50px;
     background: #1f3540;
-    font-size: 26px;
+    font-size: 20px;
     color: #26ffcb;
-    /* margin-top: 20px; */
-    margin-bottom: 50px;
+    margin-top: -5px;
+    margin-bottom: 20px;
 }
 .reset:hover {
     background: #26ffcb;
