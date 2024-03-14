@@ -1,4 +1,5 @@
 import React from 'react' 6.9k (gzipped: 2.7k);
+import './TicTacToe.css';
 
 const TicTacToe = () => {
   return (
